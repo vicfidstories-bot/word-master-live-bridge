@@ -216,7 +216,8 @@ app.post("/connect", async (req, res) => {
           data.user?.uniqueId ||
           data.user?.nickname ||
           "Unknown",
-        comment: data.comment || "",
+       
+      comment: data.content || data.comment || ""  ,
         timestamp: Date.now()
       };
 
